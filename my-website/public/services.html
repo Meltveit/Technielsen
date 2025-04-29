@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Våre tjenester - Utforsk vårt omfattende utvalg av profesjonelle løsninger.">
-    <meta name="keywords" content="tjenester, løsninger, konsulenttjenester, profesjonelle tjenester">
-    <meta name="author" content="Ditt navn">
+    <meta name="description" content="TechNielsen tilbyr IT-konsulentjenester, webutvikling og teknisk support">
+    <meta name="keywords" content="IT-konsulent, webutvikling, nettsider, teknisk support, IT-tjenester">
+    <meta name="author" content="TechNielsen">
     
     <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Tjenester | Ditt nettsted">
-    <meta property="og:description" content="Utforsk vårt omfattende utvalg av profesjonelle løsninger og tjenester.">
-    <meta property="og:image" content="URL til bilde som vises ved deling">
-    <meta property="og:url" content="https://ditt-nettsted.no/services.html">
+    <meta property="og:title" content="Tjenester | TechNielsen">
+    <meta property="og:description" content="IT-konsulentjenester, webutvikling og teknisk support">
+    <meta property="og:url" content="https://technielsen.web.app/services.html">
     <meta property="og:type" content="website">
     
-    <title>Tjenester | Ditt nettsted</title>
+    <title>Tjenester | TechNielsen</title>
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -23,169 +22,75 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     
-    <!-- Google Fonts (Eksempel) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Stilregler spesifikke for tjenester-siden */
         .services-section {
             padding: 5rem 0;
         }
         
-        .service-item {
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            margin-bottom: 5rem;
-        }
-        
-        @media (min-width: 768px) {
-            .service-item {
-                flex-direction: row;
-                align-items: center;
-                gap: 3rem;
-            }
-            
-            .service-item:nth-child(even) {
-                flex-direction: row-reverse;
-            }
-        }
-        
-        .service-image {
-            flex: 1;
-            margin-bottom: 2rem;
-        }
-        
-        @media (min-width: 768px) {
-            .service-image {
-                margin-bottom: 0;
-            }
-        }
-        
-        .service-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .service-content {
-            flex: 1;
+            padding: 2rem;
+            flex-grow: 1;
         }
         
-        .service-content h2 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+        .service-image {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .service-features {
+        .service-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-points {
             margin-top: 1.5rem;
-            padding-left: 1.5rem;
+            list-style-type: none;
         }
         
-        .service-features li {
+        .service-points li {
             margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
             position: relative;
         }
         
-        .service-features li::before {
-            content: "✓";
-            color: var(--secondary-color);
+        .service-points li:before {
+            content: '✓';
             position: absolute;
-            left: -1.5rem;
+            left: 0;
+            color: var(--primary-color);
             font-weight: bold;
         }
         
-        .cta-section {
-            background-color: var(--light-color);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        /* Prisliste styling */
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .pricing-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .pricing-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .pricing-item.featured {
-            border: 2px solid var(--primary-color);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .pricing-item.featured::before {
-            content: "Anbefalt";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-        
-        .pricing-header h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .price-period {
-            font-size: 1rem;
-            color: #777;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-        
-        .pricing-features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
+        @media (min-width: 768px) {
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+            
+            .service-card {
+                margin-bottom: 0;
+                height: 100%;
+            }
         }
     </style>
 </head>
@@ -194,7 +99,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Ditt nettsted logo">
+                    <h1>TechNielsen</h1>
                 </a>
             </div>
             <nav>
@@ -212,128 +117,70 @@
         <section class="hero">
             <div class="container">
                 <h1>Våre tjenester</h1>
-                <p>Vi tilbyr et bredt spekter av profesjonelle tjenester skreddersydd for dine behov.</p>
+                <p>Skreddersydde IT-løsninger for din bedrift</p>
             </div>
         </section>
 
         <section class="services-section">
             <div class="container">
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="images/service1.jpg" alt="Tjeneste 1 bilde">
-                    </div>
-                    <div class="service-content">
-                        <h2>Tjeneste 1</h2>
-                        <p>Detaljert beskrivelse av din første tjeneste. Forklar hva tjenesten innebærer, hvordan den fungerer, og hvilke fordeler kunden vil få.</p>
-                        <p>Her er en paragraf til med ytterligere informasjon om tjenesten, for eksempel hvem den passer for, eller spesielle features den har.</p>
-                        <ul class="service-features">
-                            <li>Fordel eller feature 1 av tjenesten</li>
-                            <li>Fordel eller feature 2 av tjenesten</li>
-                            <li>Fordel eller feature 3 av tjenesten</li>
-                            <li>Fordel eller feature 4 av tjenesten</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Få tilbud</a>
-                    </div>
-                </div>
+                <h2>Hva vi tilbyr</h2>
+                <p>TechNielsen tilbyr praktiske og effektive IT-løsninger tilpasset din bedrifts behov. Her er en oversikt over våre hovedtjenester:</p>
                 
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="images/service2.jpg" alt="Tjeneste 2 bilde">
-                    </div>
-                    <div class="service-content">
-                        <h2>Tjeneste 2</h2>
-                        <p>Detaljert beskrivelse av din andre tjeneste. Forklar hva tjenesten innebærer, hvordan den fungerer, og hvilke fordeler kunden vil få.</p>
-                        <p>Her er en paragraf til med ytterligere informasjon om tjenesten, for eksempel hvem den passer for, eller spesielle features den har.</p>
-                        <ul class="service-features">
-                            <li>Fordel eller feature 1 av tjenesten</li>
-                            <li>Fordel eller feature 2 av tjenesten</li>
-                            <li>Fordel eller feature 3 av tjenesten</li>
-                            <li>Fordel eller feature 4 av tjenesten</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Få tilbud</a>
-                    </div>
-                </div>
-                
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="images/service3.jpg" alt="Tjeneste 3 bilde">
-                    </div>
-                    <div class="service-content">
-                        <h2>Tjeneste 3</h2>
-                        <p>Detaljert beskrivelse av din tredje tjeneste. Forklar hva tjenesten innebærer, hvordan den fungerer, og hvilke fordeler kunden vil få.</p>
-                        <p>Her er en paragraf til med ytterligere informasjon om tjenesten, for eksempel hvem den passer for, eller spesielle features den har.</p>
-                        <ul class="service-features">
-                            <li>Fordel eller feature 1 av tjenesten</li>
-                            <li>Fordel eller feature 2 av tjenesten</li>
-                            <li>Fordel eller feature 3 av tjenesten</li>
-                            <li>Fordel eller feature 4 av tjenesten</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Få tilbud</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="services-section" style="background-color: var(--light-color);">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 3rem;">Våre pakker og priser</h2>
-                
-                <div class="pricing-container">
-                    <div class="pricing-item">
-                        <div class="pricing-header">
-                            <h3>Basis</h3>
-                            <div class="price">999 kr</div>
-                            <div class="price-period">per måned</div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="/api/placeholder/400/200" alt="Webutvikling">
                         </div>
-                        <ul class="pricing-features">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Support via e-post</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Velg pakke</a>
+                        <div class="service-content">
+                            <h3>Webutvikling</h3>
+                            <p>Jeg utvikler skreddersydde nettsider som er brukervennlige, responsive og optimalisert for søkemotorer.</p>
+                            <ul class="service-points">
+                                <li>Responsivt webdesign</li>
+                                <li>Skreddersydde løsninger</li>
+                                <li>Søkemotoroptimalisering (SEO)</li>
+                                <li>Vedlikehold og oppdateringer</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="pricing-item featured">
-                        <div class="pricing-header">
-                            <h3>Standard</h3>
-                            <div class="price">1999 kr</div>
-                            <div class="price-period">per måned</div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="/api/placeholder/400/200" alt="IT-Konsulentjenester">
                         </div>
-                        <ul class="pricing-features">
-                            <li>Alt i Basis</li>
-                            <li>Feature 4</li>
-                            <li>Feature 5</li>
-                            <li>Feature 6</li>
-                            <li>Support via telefon og e-post</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Velg pakke</a>
+                        <div class="service-content">
+                            <h3>IT-Konsulentjenester</h3>
+                            <p>Jeg tilbyr rådgivning og praktiske løsninger for bedrifter som trenger hjelp med IT-infrastruktur og systemer.</p>
+                            <ul class="service-points">
+                                <li>IT-strategi og planlegging</li>
+                                <li>Systemintegrasjon</li>
+                                <li>Sikkerhetsvurderinger</li>
+                                <li>Oppsett av programvare og systemer</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="pricing-item">
-                        <div class="pricing-header">
-                            <h3>Premium</h3>
-                            <div class="price">2999 kr</div>
-                            <div class="price-period">per måned</div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="/api/placeholder/400/200" alt="Teknisk Support">
                         </div>
-                        <ul class="pricing-features">
-                            <li>Alt i Standard</li>
-                            <li>Feature 7</li>
-                            <li>Feature 8</li>
-                            <li>Feature 9</li>
-                            <li>Prioritert support 24/7</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Velg pakke</a>
+                        <div class="service-content">
+                            <h3>Teknisk Support</h3>
+                            <p>Jeg hjelper bedrifter med tekniske problemer og utfordringer relatert til IT-systemer og nettverk.</p>
+                            <ul class="service-points">
+                                <li>Feilsøking og problemløsning</li>
+                                <li>Nettverkshåndtering</li>
+                                <li>Dataredning og backup</li>
+                                <li>Generell IT-support</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ikke sikker på hvilken tjeneste som passer for deg?</h2>
-                <p>Vi tilbyr en gratis konsultasjon for å hjelpe deg med å finne den beste løsningen for dine behov.</p>
-                <a href="contact.html" class="btn">Kontakt oss i dag</a>
+                
+                <div class="cta-section" style="text-align: center; margin-top: 4rem;">
+                    <h3>Trenger du hjelp med et IT-prosjekt?</h3>
+                    <p>Ta kontakt for en uforpliktende samtale om hvordan jeg kan hjelpe din bedrift.</p>
+                    <a href="contact.html" class="btn">Kontakt meg</a>
+                </div>
             </div>
         </section>
     </main>
@@ -343,9 +190,8 @@
             <div class="footer-columns">
                 <div class="footer-column">
                     <h4>Kontakt</h4>
-                    <p>E-post: kontakt@ditt-nettsted.no</p>
-                    <p>Telefon: 123 45 678</p>
-                    <p>Adresse: Gateveien 123, 0000 Oslo</p>
+                    <p>E-post: kontakt@technielsen.no</p>
+                    <p>Telefon: 95 86 32 24</p>
                 </div>
                 <div class="footer-column">
                     <h4>Lenker</h4>
@@ -356,17 +202,9 @@
                         <li><a href="contact.html">Kontakt</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h4>Følg oss</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">Facebook</a>
-                        <a href="#" aria-label="Instagram">Instagram</a>
-                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                    </div>
-                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Ditt nettsted. Alle rettigheter reservert.</p>
+                <p>&copy; 2025 TechNielsen. Alle rettigheter reservert.</p>
             </div>
         </div>
     </footer>

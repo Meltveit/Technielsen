@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ditt-nettsted.no/</loc>
-    <lastmod>2025-04-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://technielsen.web.app/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ditt-nettsted.no/about.html</loc>
-    <lastmod>2025-04-29</lastmod>
+    <loc>https://technielsen.web.app/about.html</loc>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ditt-nettsted.no/services.html</loc>
-    <lastmod>2025-04-29</lastmod>
+    <loc>https://technielsen.web.app/services.html</loc>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ditt-nettsted.no/contact.html</loc>
-    <lastmod>2025-04-29</lastmod>
+    <loc>https://technielsen.web.app/contact.html</loc>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
