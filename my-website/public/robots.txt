@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Tillat alle søkemotorer å indeksere hele nettstedet
+# Sitemap-adresse for søkemotorer
+Sitemap: https://ditt-nettsted.no/sitemap.xml
