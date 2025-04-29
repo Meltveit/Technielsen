@@ -1,0 +1,35 @@
+<!-- Header Component -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="TechNielsen Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">Hjem</a></li>
+                <li><a href="about.html" id="nav-about">Om oss</a></li>
+                <li><a href="services.html" id="nav-services">Tjenester</a></li>
+                <li><a href="contact.html" id="nav-contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+// Set active class based on current page
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname;
+    
+    if (currentPage.includes('index.html') || currentPage.endsWith('/')) {
+        document.getElementById('nav-home').classList.add('active');
+    } else if (currentPage.includes('about.html')) {
+        document.getElementById('nav-about').classList.add('active');
+    } else if (currentPage.includes('services.html')) {
+        document.getElementById('nav-services').classList.add('active');
+    } else if (currentPage.includes('contact.html')) {
+        document.getElementById('nav-contact').classList.add('active');
+    }
+});
+</script>

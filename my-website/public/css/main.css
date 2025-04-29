@@ -143,6 +143,11 @@ header .container {
     color: var(--primary-color);
 }
 
+.logo img {
+    max-height: 50px;
+    width: auto;
+}
+
 .logo a {
     color: var(--primary-color);
     text-decoration: none;
@@ -184,6 +189,9 @@ nav ul li a.active:before {
 /* Hero-seksjon */
 .hero {
     background-color: var(--light-color);
+    background-image: url('../images/hero-image.jpeg');
+    background-size: cover;
+    background-position: center;
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -197,6 +205,13 @@ nav ul li a.active:before {
     right: 0;
     height: 50px;
     background: linear-gradient(to bottom right, transparent 49%, white 50%);
+}
+
+.hero .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
 }
 
 .hero h1, .hero h2 {

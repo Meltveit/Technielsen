@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Om TechNielsen - IT-konsulent med fokus på kvalitet og personlig service">
-    <meta name="keywords" content="IT-konsulent, webutvikling, nettsider, teknisk support, om oss">
+    <meta name="description" content="TechNielsen har 6 års erfaring innen IT-bransjen. 2 år som IKT-medarbeider og 4 år som IT-konsulent med fokus på teknisk support og IT-løsninger.">
+    <meta name="keywords" content="IT-konsulent, teknisk support, IT erfaring, IT-løsninger, om oss">
     <meta name="author" content="TechNielsen">
     
     <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Om oss | TechNielsen">
-    <meta property="og:description" content="IT-konsulent med fokus på kvalitet og personlig service">
+    <meta property="og:description" content="IT-konsulent med 6 års erfaring innen IT-bransjen som leverer teknisk support og IT-løsninger til bedrifter.">
     <meta property="og:url" content="https://technielsen.web.app/about.html">
     <meta property="og:type" content="website">
     
     <title>Om oss | TechNielsen</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -33,27 +33,19 @@
         }
         
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .about-text {
-            order: 1;
-        }
-        
-        .about-image {
-            order: 2;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
         }
         
         .timeline {
-            margin-top: 5rem;
             position: relative;
             padding: 2rem 0;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .timeline::before {
@@ -106,16 +98,45 @@
             margin-top: -10px;
             z-index: 1;
         }
+
+        .highlights {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .highlight-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
         
         @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-text, .about-image {
-                order: 0;
-            }
-            
             .timeline::before {
                 left: 40px;
             }
@@ -132,29 +153,32 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <h1>TechNielsen</h1>
-                </a>
+    <!-- Header Placeholder -->
+    <div class="header-placeholder">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="TechNielsen Logo">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="about.html" class="active">Om oss</a></li>
+                        <li><a href="services.html">Tjenester</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="about.html" class="active">Om oss</a></li>
-                    <li><a href="services.html">Tjenester</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <main>
         <section class="hero">
             <div class="container">
                 <h1>Om TechNielsen</h1>
-                <p>IT-konsulent med erfaring siden 2018</p>
+                <p>IT-konsulent med 6 års erfaring innen IT-bransjen</p>
             </div>
         </section>
 
@@ -162,14 +186,33 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
-                        <h2>Vår historie</h2>
-                        <p>TechNielsen ble etablert i 2018 som et enkeltmannsforetak med mål om å tilby kvalitetssikrede IT-tjenester til små og mellomstore bedrifter.</p>
-                        <p>Jeg har jobbet med ulike klienter og hjulpet dem med alt fra nettsideutvikling til teknisk support og nettverksproblemer. Min filosofi er å levere praktiske IT-løsninger som fungerer for klientens faktiske behov.</p>
-                        <p>Med kompetanse innenfor webutvikling og IT-infrastruktur, kan jeg tilby tjenester som er skreddersydd til dine behov. Enten du trenger en enkel nettside eller hjelp med tekniske IT-utfordringer, er jeg her for å hjelpe.</p>
+                        <h2>Min erfaring</h2>
+                        <p>TechNielsen bygger på min erfaring som IKT-medarbeider fra 2018, der jeg jobbet i 2 år før jeg etablerte meg som IT-konsulent. Siden da har jeg jobbet som konsulent i 4 år og bygget opp god erfaring innenfor IT-feltet.</p>
+                        <p>Gjennom disse årene har jeg jobbet tett med ulike klienter for å løse deres tekniske utfordringer og optimalisere deres IT-infrastruktur. Jeg har spesialisert meg på å levere praktiske, kostnadseffektive løsninger som fokuserer på klientens faktiske behov fremfor unødvendig komplekse systemer.</p>
+                        <p>Min filosofi er enkel: teknologi skal være et verktøy som gjør arbeidshverdagen enklere, ikke mer komplisert. Derfor tilbyr jeg løsninger som er tilpasset din bedrifts størrelse og behov, uten unødvendig kompleksitet.</p>
                     </div>
-                    <div class="about-image">
-                        <!-- Placeholder for company image -->
-                        <img src="/api/placeholder/500/300" alt="TechNielsen arbeidsplass">
+                    
+                    <div class="highlights">
+                        <div class="highlight-card">
+                            <h3>Kompetanseområder</h3>
+                            <ul>
+                                <li>IT-infrastruktur</li>
+                                <li>Nettverkssikkerhet</li>
+                                <li>Systemintegrasjon</li>
+                                <li>Teknisk feilsøking</li>
+                                <li>Backup-løsninger</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-card">
+                            <h3>Arbeidsmetode</h3>
+                            <ul>
+                                <li>Personlig tilnærming</li>
+                                <li>Fokus på praktiske løsninger</li>
+                                <li>Tett kommunikasjon</li>
+                                <li>Kostnadseffektive valg</li>
+                                <li>Tilgjengelig support</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
@@ -177,27 +220,27 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2018</div>
-                            <h3>Oppstart</h3>
-                            <p>TechNielsen ble etablert som enkeltmannsforetak med fokus på IT-konsulentjenester.</p>
+                            <div class="timeline-date">2018-2020</div>
+                            <h3>IKT-medarbeider</h3>
+                            <p>Startet karrieren som IKT-medarbeider hvor jeg fikk solid erfaring med brukerstøtte, nettverksadministrasjon og vedlikehold av IT-systemer for en mellomstor bedrift. Denne perioden la grunnlaget for min forståelse av bedrifters IT-behov og hvordan tekniske problemer best kan løses i praksis.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2020</div>
-                            <h3>Utvidet tjenestetilbud</h3>
-                            <p>Begynte å tilby mer omfattende webutviklingstjenester basert på etterspørsel fra klienter.</p>
+                            <div class="timeline-date">2020-2022</div>
+                            <h3>Etablerte TechNielsen</h3>
+                            <p>Etablerte TechNielsen som IT-konsulentvirksomhet med fokus på teknisk support og IT-løsninger for små og mellomstore bedrifter. Begynte å bygge kundebasen og utvidet min kompetanse innen IT-sikkerhet og systemintegrasjon. I denne perioden spesialiserte jeg meg på å levere skreddersydde, praktiske IT-løsninger.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2025</div>
-                            <h3>I dag</h3>
-                            <p>Jobber med et utvalg klienter og leverer skreddersydde IT-løsninger og webløsninger.</p>
+                            <div class="timeline-date">2022-2025</div>
+                            <h3>Videreutvikling</h3>
+                            <p>Utvidet tjenestetilbudet basert på kundenes behov og markedsutvikling. Fokuserte på å styrke kompetansen innen IT-infrastruktur, nettverkssikkerhet og backup-løsninger. Har i denne perioden utviklet en effektiv arbeidsmetode som kombinerer teknisk ekspertise med praktisk problemløsning, alltid med kundens faktiske behov i sentrum.</p>
                         </div>
                     </div>
                 </div>
